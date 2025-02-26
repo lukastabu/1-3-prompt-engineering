@@ -8,9 +8,9 @@
 import { encoding_for_model } from 'tiktoken';
 
 // To get the tokeniser corresponding to a specific model in the OpenAI API:
-const encoding = encoding_for_model('gpt-3.5-turbo');
+const encoding = encoding_for_model('gpt-4o-mini');
 
-const text = `Jupiter is the fifth planet from the Sun and the \
+const text0 = `Jupiter is the fifth planet from the Sun and the \
 largest in the Solar System. It is a gas giant with \
 a mass one-thousandth that of the Sun, but two-and-a-half \
 times that of all the other planets in the Solar System combined. \
@@ -20,6 +20,8 @@ before recorded history. It is named after the Roman god Jupiter.[19] \
 When viewed from Earth, Jupiter can be bright enough for its reflected \
 light to cast visible shadows,[20] and is on average the third-brightest \
 natural object in the night sky after the Moon and Venus.`;
+
+const text = `The quick brown fox jumps over the lazy dog.`;
 
 const tokens = encoding.encode(text);
 
